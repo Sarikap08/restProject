@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "8e575a4e-5053-41fc-b4f7-b1a287d75d45",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23892058"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5051/post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"machineId\": 12345,\r\n    \"stats\": {\r\n        \"cpuTemp\": 90,\r\n        \"fanSpeed\": 400,\r\n        \"HDDSpace\": 800\r\n    },\r\n    \"lastLoggedIn\": \"admin/Paul\",\r\n    \"sysTime\": \"2022-04-23T18:25:43.511Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5051/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5051",
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5051/machines",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5051/machines",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5051",
+					"path": [
+						"machines"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
