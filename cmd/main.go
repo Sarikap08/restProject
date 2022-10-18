@@ -15,6 +15,9 @@ func main() {
 func buildHttpServer() {
 	router := mux.NewRouter().SkipClean(true)
 	handlers.NewSystemHandler().RegisterEndpoint(router)
+
+	log.Println("Starting HTTP Server............")
+
 	err := http.ListenAndServe(":5051", router)
 	if err != nil {
 		log.Fatal("Encounter error while starting the HTTP server : ", err)
